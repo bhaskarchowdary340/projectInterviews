@@ -1,0 +1,23 @@
+<!-- tasks.component.html -->
+<div class="padding-40">
+    <div class="row pb-5">
+        <div class="d-flex justify-content-between">
+            <h2 class="card-title"><strong>All Tasks</strong></h2>
+            <button class="btn btn-primary" [routerLink]="['/add-task']">Add New Task</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 pb-4" *ngFor="let task of tasks">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"><strong>Title</strong>: {{ task.title }}</p>
+                    <p class="card-text"><strong>Description</strong>: {{ task.description }}</p>
+                    <div class="d-flex justify-content-between">
+                        <p class="card-text"><strong>Status</strong> {{ task.status }}</p>
+                        <p class="card-text cursor text-primary" (click)="deleteTask(task)"><strong>Delete</strong> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

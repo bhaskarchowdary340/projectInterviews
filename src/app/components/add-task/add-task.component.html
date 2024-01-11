@@ -1,0 +1,63 @@
+
+<!-- tasks.component.html -->
+<div class="padding-40">
+    <div class="row pb-5">
+        <div class="d-flex justify-content-between">
+            <h2 class="card-title"><strong>Add Task</strong></h2>
+        </div>
+    </div>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+        <div class="row pb-4">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="id">ID</label>
+              <input type="number" id="id" formControlName="id" class="form-control" >
+              <div *ngIf="hasError('id', 'required')" class="text-danger">
+                ID is required.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" formControlName="title" class="form-control">
+              <div *ngIf="hasError('title', 'required')" class="text-danger">
+                Title is required.
+              </div>
+              <div *ngIf="hasError('title', 'minlength')" class="text-danger">
+                Title must be at least 3 characters long.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" id="description" formControlName="description" class="form-control">
+              <div *ngIf="hasError('description', 'required')" class="text-danger">
+                Description is required.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select id="status" formControlName="status" class="form-control">
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+              </select>
+              <div *ngIf="hasError('status', 'required')" class="text-danger">
+                Status is required.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary ">Submit</button>
+        </div>
+       
+      </form>
+      
+      
+</div>
+

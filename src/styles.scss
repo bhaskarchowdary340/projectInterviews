@@ -1,0 +1,37 @@
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../src/assets/fonts/Gilroy-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy Bold';
+  src: url('../src/assets/fonts/Gilroy-Bold.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy', sans-serif;
+}
+
+html,
+
+body {
+  margin: 0;
+  font-family: "Gilroy", sans-serif;
+  background-color: rgb(237, 235, 235) !important;
+   
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.padding-40{
+    padding: 40px;
+}
+.cursor{
+    cursor: pointer;
+}
